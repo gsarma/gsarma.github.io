@@ -167,7 +167,7 @@ if(isOpen){
 let body=`<div class="section-body"><p class="section-desc">${s.desc}</p>`;
 s.pubs.forEach(p=>{
 const title=p.u?`<a class="pub-title" href="${p.u}" target="_blank" rel="noopener noreferrer">${p.t}</a>`:`<span class="pub-title">${p.t}</span>`;
-body+=`<div class="pub"><span class="pub-year">${p.y}</span><div>${title}<div class="pub-meta">${p.a} &middot; <em>${p.v}</em></div></div></div>`;
+body+=`<div class="pub"><span class="pub-year">${p.y}</span><div>${title}<div class="pub-meta">${p.a} &middot; <em>${p.v}</em>${p.n?'<span class="pub-note">'+p.n+'</span>':''}</div></div></div>`;
 });
 body+='</div>';
 d.innerHTML+=body;
