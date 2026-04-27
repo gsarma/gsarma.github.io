@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gopal P. Sarma</title>
+<meta name="description" content="Gopal P. Sarma — building and leading large-scale science and technology programs at the intersection of AI, national security, and society.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#FAFAF8;--text:#1a1a1a;--muted:#5a5a5a;--accent:#2d2d2d;--border:#e0ddd8;--tag-bg:#f0ede8;--link:#3d5a80;--serif:'Libre Baskerville',Georgia,serif;--sans:'Source Sans 3','Source Sans Pro',sans-serif}
+body{background:var(--bg);font-family:var(--sans);color:var(--text);-webkit-font-smoothing:antialiased}
+a{color:var(--link);text-decoration:none}
+@keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+.page{animation:fadeIn .6s ease}
+
+nav{max-width:720px;margin:0 auto 56px;padding:0 24px;display:flex;gap:28px}
+.nav-link{background:none;border:none;cursor:pointer;font-family:var(--serif);font-size:.95rem;color:var(--muted);border-bottom:1.5px solid transparent;padding-bottom:4px;letter-spacing:.02em;transition:all .2s ease}
+.nav-link.active{color:var(--text);border-bottom-color:var(--text)}
+
+.home{max-width:640px;margin:0 auto;padding:0 24px}
+.photo{width:160px;height:160px;border-radius:50%;background:linear-gradient(135deg,var(--tag-bg),var(--border));margin:0 auto 40px;display:flex;align-items:center;justify-content:center;color:var(--muted);font-family:var(--serif);font-size:.75rem;letter-spacing:.05em;text-transform:uppercase}
+h1{font-family:var(--serif);font-size:1.8rem;font-weight:400;text-align:center;margin:0 0 8px;letter-spacing:-.01em}
+.credentials{font-size:.85rem;color:var(--muted);text-align:center;margin:0 0 48px;letter-spacing:.04em;line-height:1.6}
+.bio{font-size:1.02rem;line-height:1.75;color:var(--accent)}
+.bio p{margin-bottom:20px}
+.contact{margin-top:48px;padding-top:24px;border-top:1px solid var(--border);display:flex;gap:24px;justify-content:center}
+.contact a{font-size:.9rem;letter-spacing:.02em}
+
+.pubs{max-width:720px;margin:0 auto;padding:0 24px}
+.pubs-intro{font-size:1rem;line-height:1.7;color:var(--muted);margin-bottom:48px;max-width:600px}
+.section{margin-bottom:8px;border-bottom:1px solid var(--border)}
+.section-header{width:100%;background:none;border:none;cursor:pointer;padding:20px 0;display:flex;justify-content:space-between;align-items:center;text-align:left}
+.section-title{font-family:var(--serif);font-size:1.1rem;font-weight:400;color:var(--text)}
+.section-toggle{font-size:.8rem;color:var(--muted);margin-left:16px;flex-shrink:0;transition:transform .3s ease}
+.section-toggle.open{transform:rotate(45deg)}
+.section-body{padding-bottom:28px;animation:fadeIn .3s ease}
+.section-desc{font-size:.92rem;line-height:1.65;color:var(--muted);margin-bottom:24px;font-style:italic}
+.pub{margin-bottom:20px;display:flex;gap:12px;align-items:baseline}
+.pub-year{font-size:.8rem;color:var(--muted);flex-shrink:0;min-width:36px}
+.pub-title{font-size:.95rem;line-height:1.45;color:var(--text)}
+a.pub-title{border-bottom:1px solid var(--border);transition:border-color .2s ease}
+a.pub-title:hover{border-color:var(--muted)}
+.pub-meta{font-size:.82rem;color:var(--muted);margin-top:3px}
+.pub-note{display:block;margin-top:2px;font-size:.78rem}
+
+footer{max-width:720px;margin:64px auto 0;padding:24px 24px 0;border-top:1px solid var(--border);text-align:center}
+footer p{font-size:.78rem;color:var(--muted);letter-spacing:.03em}
+</style>
+</head>
+<body>
+<div style="padding-top:60px;padding-bottom:80px">
+
+<nav>
+<button class="nav-link active" onclick="showPage('home')" id="nav-home">About</button>
+<button class="nav-link" onclick="showPage('pubs')" id="nav-pubs">Writing &amp; Publications</button>
+</nav>
+
+<div id="page-home" class="page">
+<div class="home">
+<div class="photo">Photo</div>
+<h1>Gopal P. Sarma</h1>
+<p class="credentials">AB Mathematics, Harvard &middot; PhD Applied Physics, Stanford &middot; MD, Emory</p>
+<div class="bio">
+<p>I build and lead large-scale science and technology programs. I've managed major research portfolios at DARPA, led AI and biosecurity policy at the White House, and helped stand up research institutes from the ground floor. I invest in deep tech and advise organizations navigating the convergence of advanced AI with complex technical and operational challenges. I'm currently at RAND, focused on critical and emerging technologies.</p>
+<p>I've been tracking AI closely for a long time — long before the current moment — and much of my career has been oriented toward operating at the frontier where powerful new capabilities meet institutions, national security, and society at scale.</p>
+</div>
+<div class="contact">
+<a href="https://www.linkedin.com/in/gopal-p-sarma/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+</div>
+</div>
+</div>
+
+<div id="page-pubs" class="page" style="display:none">
+<div class="pubs">
+<p class="pubs-intro">A selection of publications and preprints organized by theme, spanning nearly two decades of work across several fields.</p>
+<div id="sections"></div>
+</div>
+</div>
+
+<footer><p>&copy; 2026 Gopal P. Sarma</p></footer>
+</div>
+
+<script>
+const DATA=[
+{theme:"AI Policy & Governance",desc:"Current work at RAND on the strategic and technical dimensions of governing advanced AI systems, including AGI forecasting methodology, scenario analysis for policymakers, and the role of formal methods and automated reasoning in securing critical infrastructure.",pubs:[
+{t:"Artificial General Intelligence Forecasting and Scenario Analysis: State of the Field, Methodological Gaps, and Strategic Implications",a:"GP Sarma, SD Bhatt, M Jacob, R Steratore",v:"RAND Research Report RR-A4692-1",y:2026,u:"https://www.rand.org/pubs/research_reports/RRA4692-1.html"},
+{t:"Tipping the Cyber Balance: How AI Benchmarks Could Make Software Safer",a:"GP Sarma, K Fisher",v:"RAND Commentary",y:2026,u:"https://www.rand.org/pubs/commentary/2026/02/tipping-the-cyber-balance-how-ai-benchmarks-could-make.html"},
+]},
+{theme:"AI Safety (Foundations)",desc:"Earlier work on the technical and philosophical foundations of AI alignment, including value learning from mammalian neuropsychology, formal verification approaches, and the intersection of biological simulation with AI safety.",pubs:[
+{t:"Formal Methods for the Informal Engineer: Workshop Recommendations",a:"GP Sarma, J Koppel, G Malecha, P Schultz, E Drexler, R Kumar, C Roux, P Zucker",v:"Preprint",y:2021,u:"https://arxiv.org/abs/2104.00739"},
+{t:"Integrative Biological Simulation, Neuropsychology, and AI Safety",a:"GP Sarma, A Safron, NJ Hay",v:"Proceedings of the AAAI Workshop on AI Safety",y:2019,u:"https://arxiv.org/abs/1811.03493"},
+{t:"AI Safety and Reproducibility: Establishing Robust Foundations for the Neuropsychology of Human Values",a:"GP Sarma, NJ Hay, A Safron",v:"Intl. Conference on Computer Safety, Reliability, and Security",y:2018,u:"https://arxiv.org/abs/1712.04307"},
+{t:"Robust Computer Algebra, Theorem Proving, and Oracle AI",a:"GP Sarma, NJ Hay",v:"Informatica 41(3)",y:2017,u:"https://arxiv.org/abs/1708.02553"},
+{t:"Brief Notes on Hard Takeoff, Value Alignment, and Coherent Extrapolated Volition",a:"GP Sarma",v:"Preprint",y:2017,u:"https://arxiv.org/abs/1704.00783"},
+{t:"Mammalian Value Systems",a:"GP Sarma, NJ Hay",v:"Informatica 41(4)",y:2017,u:"https://arxiv.org/abs/1607.08289"},
+]},
+{theme:"Medicine & the Scientific Enterprise",desc:"Work rethinking the physician-scientist pipeline, the relationship between clinical medicine and computation, and the operational infrastructure of research institutions \u2014 including a Nature Medicine commentary on modernizing the research-clinical divide and essays on scientific operations and the bioeconomy in Issues in Science and Technology.",pubs:[
+{t:"Scaling Research Solutions for Society\u2019s Real Problems",a:"GP Sarma",v:"Issues in Science and Technology",y:2022,u:"https://issues.org/scaling-research-solutions-society-sarma/"},
+{t:"Building a Data Infrastructure for the Bioeconomy",a:"GP Sarma, M Haendel",v:"Issues in Science and Technology",y:2021,u:"https://issues.org/building-data-infrastructure-bioeconomy-sarma-haendel/"},
+{t:"Physiology as a Lingua Franca for Clinical Machine Learning",a:"GP Sarma, E Reinertsen, and the ML4CVD Group",v:"Patterns 1:2",y:2020,u:"https://www.cell.com/patterns/pdf/S2666-3899(20)30017-9.pdf"},
+{t:"The Physician-Scientist, 75 Years After Vannevar Bush",a:"GP Sarma, A Levey, V Faundez",v:"Nature Medicine 26, 461\u2013462",y:2020,u:"https://www.nature.com/articles/s41591-020-0828-1"},
+{t:"Re-Examining Physician-Scientist Training Through the Prism of the Discovery-Invention Cycle",a:"GP Sarma, A Levey, V Faundez",v:"F1000Research 8:2123",y:2020,u:"https://f1000research.com/articles/8-2123"},
+]},
+{theme:"Large Biomedical Collaborations",desc:"Work as part of teams at the Broad Institute of MIT and Harvard, contributing to large-scale studies applying deep learning to electrocardiograms, electronic health records, cardiovascular genetics, and pan-ancestry genome-wide association analyses.",pubs:[
+{t:"Pan-UK Biobank Genome-Wide Association Analyses Enhance Discovery and Resolution into Ancestry-Enriched Effects",a:"KJ Karczewski, R Gupta, M Kanai, ... GP Sarma, ... BM Neale, EG Atkinson, AR Martin",v:"Nature Genetics 57, 2408\u20132417",y:2025,u:"https://www.nature.com/articles/s41588-025-02335-7"},
+{t:"Frequency of Electrocardiogram-Defined Cardiac Conduction Disorders in a Multi-Institutional Primary Care Cohort",a:"JS Haimovich, P Di Achille, V Nauffal, P Singh, C Reeder, X Wang, GP Sarma, ... SA Lubitz, S Khurshid",v:"JACC Advances 3(7)",y:2024,u:"https://www.jacc.org/doi/10.1016/j.jacadv.2024.101004"},
+{t:"Deep Learning on Resting Electrocardiogram to Identify Impaired Heart Rate Recovery",a:"N Diamant, P Di Achille, ... GP Sarma, ... SA Lubitz, JE Ho",v:"Cardiovascular Digital Health Journal 3(4)",y:2022,u:"https://pmc.ncbi.nlm.nih.gov/articles/PMC9422063/"},
+{t:"ECG-Based Deep Learning and Clinical Risk Factors to Predict Atrial Fibrillation",a:"S Khurshid, S Friedman, C Reeder, ... GP Sarma, ... P Batra, SA Lubitz",v:"Circulation 145, 122\u2013133",y:2022,u:"https://pmc.ncbi.nlm.nih.gov/articles/PMC8748400/"},
+{t:"Cohort Design and Natural Language Processing to Reduce Bias in Electronic Health Records Research",a:"S Khurshid, C Reeder, LX Harrington, P Singh, GP Sarma, ... P Batra, SA Lubitz",v:"npj Digital Medicine",y:2022,u:"https://www.nature.com/articles/s41746-022-00590-0"},
+]},
+{theme:"Metascience & Research Practice",desc:"Essays on the infrastructure of science itself \u2014 from proposals for scientific auditing firms and systematic replication strategies, to arguments for open access as a prerequisite for scientific text mining, to the case for training researchers with broad interdisciplinary foundations.",pubs:[
+{t:"Scientific Literature Text Mining and the Case for Open Access",a:"GP Sarma",v:"The Journal of Open Engineering",y:2017,u:"https://arxiv.org/abs/1611.00097"},
+{t:"Doing Things Twice (Or Differently): Strategies to Identify Studies for Targeted Validation",a:"GP Sarma",v:"Preprint",y:2017,u:"https://arxiv.org/abs/1703.01601"},
+{t:"Scientific Auditing Firms",a:"GP Sarma",v:"Preprint",y:2016,u:"https://arxiv.org/abs/1608.00689"},
+{t:"Should We Train Scientific Generalists?",a:"GP Sarma",v:"The Winnower",y:2016,u:"https://arxiv.org/abs/1410.4422"},
+{t:"Is There Value in Training Scientific Generalists for Positions at the Edge of Academia?",a:"GP Sarma",v:"The Winnower",y:2016,u:"https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2995894"},
+]},
+{theme:"History & Philosophy of Science",desc:"Explorations of the deep intellectual history behind the scientific method, with particular focus on the European memory arts tradition and its connections to Bacon, Descartes, and Leibniz\u2019s universal calculus. Also includes work on consciousness and introspective methodology.",pubs:[
+{t:"Reductionism and the Universal Calculus",a:"GP Sarma",v:"Preprint",y:2016,u:"https://arxiv.org/abs/1607.06725"},
+{t:"Reconsidering Written Language",a:"GP Sarma",v:"Interdisciplinary Description of Complex Systems 13(3)",y:2015,u:"https://arxiv.org/abs/1309.6031"},
+{t:"The Art of Memory and the Growth of the Scientific Method",a:"GP Sarma",v:"Interdisciplinary Description of Complex Systems 13(3)",y:2015,u:"https://arxiv.org/abs/1307.0254"},
+{t:"Collecting Systematic, Introspective Reports of Pharmacological Effects and Side-Effects",a:"GP Sarma",v:"Preprint",y:2016,u:"https://philsci-archive.pitt.edu/view/creators/Sarma=3AGopal_P=2E=3A=3A.html"},
+{t:"A Simple Technique to Record Mental Events",a:"GP Sarma",v:"Journal of Consciousness Studies 22(7-8)",y:2015,u:"https://www.ingentaconnect.com/content/imp/jcs/2015/00000022/f0020007/art00010"},
+]},
+{theme:"Computational Biology & Simulation",desc:"Contributions to the OpenWorm project and broader work on integrative biological simulation methodology, including frameworks for model validation drawn from software engineering practices.",pubs:[
+{t:"OpenWorm: Overview and Recent Advances in Integrative Biological Simulation of C. elegans",a:"GP Sarma et al.",v:"Phil. Trans. Royal Society B 373(1758)",y:2018,u:"https://europepmc.org/articles/pmc6158220"},
+{t:"Integrative Biological Simulation Praxis: Considerations from Physics, Philosophy, and Data/Model Curation Practices",a:"GP Sarma, V Faundez",v:"Cellular Logistics 7(4)",y:2017,u:"https://arxiv.org/abs/1712.01417"},
+{t:"Unit Testing, Model Validation, and Biological Simulation",a:"GP Sarma, TW Jacobs, MD Watts, SV Ghayoomie, SD Larson, RC Gerkin",v:"F1000Research 5:1946",y:2016,u:"https://f1000research.com/articles/5-1946/v1"},
+]},
+{theme:"Quantum Physics & Engineering",desc:"PhD research at Stanford in Hideo Mabuchi\u2019s group on quantum feedback control, quantum error correction, and the development of hardware description languages for photonic circuits.",pubs:[
+{t:"Engineering Quantum Systems with Coherent Feedback Control",a:"GP Sarma",v:"PhD Thesis, Stanford University",y:2013,u:null},
+{t:"Gauge Subsystems, Separability, and Robustness in Autonomous Quantum Memories",a:"GP Sarma, H Mabuchi",v:"New Journal of Physics 15, 035014",y:2013,u:"https://arxiv.org/abs/1212.3564"},
+{t:"Transformation of Quantum Photonic Circuit Models by Term Rewriting",a:"GP Sarma, R Hamerly, N Tezak, DS Pavlichin, H Mabuchi",v:"IEEE Photonics 5(1)",y:2013,u:"https://arxiv.org/abs/1206.1104"},
+{t:"Specification of Photonic Circuits Using Quantum Hardware Description Language",a:"N Tezak, A Niederberger, DS Pavlichin, GP Sarma, H Mabuchi",v:"Phil. Trans. Royal Society A 370, 5270\u20135290",y:2012,u:"https://arxiv.org/abs/1111.3081"},
+{t:"A Quantum Stochastic Calculus Approach to Modeling Double-Pass Atom-Field Coupling",a:"GP Sarma, A Silberfarb, H Mabuchi",v:"Physical Review A 78, 025801",y:2008,u:"https://arxiv.org/abs/0804.0806"},
+{t:"Scattering of Polarized Laser Light by an Atomic Gas in Free Space: A QSDE Approach",a:"L Bouten, J Stockton, GP Sarma, H Mabuchi",v:"Physical Review A 75, 052111",y:2007,u:"https://arxiv.org/abs/quant-ph/0701224"},
+]},
+];
+
+let openSection=DATA[0].theme;
+
+function render(){
+const c=document.getElementById('sections');
+c.innerHTML='';
+DATA.forEach(s=>{
+const d=document.createElement('div');
+d.className='section';
+const isOpen=openSection===s.theme;
+d.innerHTML=`<button class="section-header" onclick="toggle('${s.theme.replace(/'/g,"\\'")}')">
+<span class="section-title">${s.theme}</span>
+<span class="section-toggle ${isOpen?'open':''}">+</span>
+</button>`;
+if(isOpen){
+let body=`<div class="section-body"><p class="section-desc">${s.desc}</p>`;
+s.pubs.forEach(p=>{
+const title=p.u?`<a class="pub-title" href="${p.u}" target="_blank" rel="noopener noreferrer">${p.t}</a>`:`<span class="pub-title">${p.t}</span>`;
+body+=`<div class="pub"><span class="pub-year">${p.y}</span><div>${title}<div class="pub-meta">${p.a} &middot; <em>${p.v}</em></div></div></div>`;
+});
+body+='</div>';
+d.innerHTML+=body;
+}
+c.appendChild(d);
+});
+}
+
+function toggle(theme){
+openSection=openSection===theme?null:theme;
+render();
+}
+
+function showPage(p){
+document.getElementById('page-home').style.display=p==='home'?'block':'none';
+document.getElementById('page-pubs').style.display=p==='pubs'?'block':'none';
+document.getElementById('nav-home').className='nav-link'+(p==='home'?' active':'');
+document.getElementById('nav-pubs').className='nav-link'+(p==='pubs'?' active':'');
+window.scrollTo(0,0);
+if(p==='pubs')render();
+}
+
+render();
+</script>
+</body>
+</html>
